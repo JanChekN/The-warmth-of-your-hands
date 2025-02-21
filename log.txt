@@ -1,0 +1,69 @@
+2025-02-20 18:14:35 UTC
+Windows-10-10.0.26100
+Ren'Py 8.3.4.24120703
+
+Early init took 0.05s
+Loading error handling took 0.02s
+Loading script took 0.08s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.03s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.02s
+Index archives took 0.00s
+Dump and make backups took 0.04s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.04s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.03s
+Build styles took 0.00s
+Load screen analysis took 0.02s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
+Running _start took 0.00s
+Interface start took 0.06s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1366, 768)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'Radeon RX 570 Series'
+Version: b'4.6.0 Compatibility Profile Context 24.9.1.240813'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1184, 666) drawable=(1184, 666)
+Maximum texture size: 4096x4096
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.02s
+Analyze screens took 0.00s
+Prepare screens took 0.00s
+Running _start took 0.00s
+
+Full traceback:
+  File "C:\Users\ivant\Downloads\renpy-8.3.4-sdk\renpy\bootstrap.py", line 359, in bootstrap
+    renpy.main.main()
+  File "C:\Users\ivant\Downloads\renpy-8.3.4-sdk\renpy\main.py", line 666, in main
+    renpy.persistent.update(True)
+  File "C:\Users\ivant\Downloads\renpy-8.3.4-sdk\renpy\persistent.py", line 434, in update
+    save()
+  File "C:\Users\ivant\Downloads\renpy-8.3.4-sdk\renpy\persistent.py", line 456, in save
+    renpy.loadsave.location.save_persistent(compressed)
+  File "C:\Users\ivant\Downloads\renpy-8.3.4-sdk\renpy\savelocation.py", line 622, in save_persistent
+    l.save_persistent(data)
+  File "C:\Users\ivant\Downloads\renpy-8.3.4-sdk\renpy\savelocation.py", line 426, in save_persistent
+    with open(fn_tmp, "wb") as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Тепло твоих рук\\The warmth of your hands\\game\\saves\\persistent.1740074463.tmp'
+
+While running game code:
+FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Тепло твоих рук\\The warmth of your hands\\game\\saves\\persistent.1740074463.tmp'

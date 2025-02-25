@@ -1,4 +1,6 @@
 label chapter_1:
+    jump pr_scene_1
+    scene bg park
     'Глава 1'
 
     'В работе...'

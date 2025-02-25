@@ -5,10 +5,10 @@ define e = Character('Незнакомка', color="#c8ffc8")
 image bg room = im.Scale("images/backgrounds/terasroom.jpg", 1920, 1080)
 image Tera st = im.Scale("images/characters/Tera.jpg", 500, 600)
 
-define name = ''
+define name = 'Mark'
 
-define gg_gender = ''
-define partner_gender = ''
+define gg_gender = 'm'
+define partner_gender = 'f'
 
 # Вместо использования оператора image можете просто
 # складывать все ваши файлы изображений в папку images.
@@ -17,14 +17,15 @@ define partner_gender = ''
 
 # Игра начинается здесь:
 label start:
-
+    jump prologue
     scene bg room
     show Tera st at Position(xpos=0.3, ypos=1.0)
-
+    
+    
     
 
     e "Привет"
-
+    
     e "Мы не знакомы..."
 
     e "...Но скоро это изменится..."
@@ -79,4 +80,6 @@ label start:
     Пол гг: [gg_gender]
     Пол партнёра: [partner_gender] (...отладка...)'
 
+    hide Tera st 
+    scene cafe
     jump prologue

@@ -151,4 +151,5 @@ label pr_scene_2:
     jump pr_scene_3
 
 label pr_scene_3:
+    
     jump chapter_1

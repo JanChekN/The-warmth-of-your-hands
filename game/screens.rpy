@@ -241,21 +241,26 @@ screen quick_menu():
     zorder 100
 
     if quick_menu:
-
+        ##frame:
+        ##    style_prefix "quick"
+        ##    background "gui/menu_background.png"  # Фоновое изображение для всей панели
+        ##    xalign 0.45
+        ##    yalign 0.99
         hbox:
             style_prefix "quick"
 
-            xalign 0.5
-            yalign 1.0
+            xalign 0.45
+            yalign 0.98
+            spacing 10
 
-            textbutton _("Назад") action Rollback()
-            textbutton _("История") action ShowMenu('history')
-            textbutton _("Пропуск") action Skip() alternate Skip(fast=True, confirm=True)
-            textbutton _("Авто") action Preference("auto-forward", "toggle")
-            textbutton _("Сохранить") action ShowMenu('save')
-            textbutton _("Б.Сохр") action QuickSave()
-            textbutton _("Б.Загр") action QuickLoad()
-            textbutton _("Опции") action ShowMenu('preferences')
+            textbutton _("Назад") action Rollback() background gui.quick_button_background
+            ##textbutton _("История") action ShowMenu('history') background gui.quick_button_background
+            textbutton _("Пропуск") action Skip() alternate Skip(fast=True, confirm=True) background gui.quick_button_background
+            textbutton _("Авто") action Preference("auto-forward", "toggle") background gui.quick_button_background
+            textbutton _("Сохранить") action ShowMenu('save') background gui.quick_button_background
+            textbutton _("Б.Сохр") action QuickSave() background gui.quick_button_background
+            textbutton _("Б.Загр") action QuickLoad() background gui.quick_button_background
+            textbutton _("Опции") action ShowMenu('preferences') background gui.quick_button_background
 
 
 ## Данный код гарантирует, что экран быстрого меню будет показан в игре в любое
@@ -290,7 +295,8 @@ screen navigation():
         style_prefix "navigation"
 
         xpos gui.navigation_xpos
-        yalign 0.5
+        yalign 0.6
+        
 
         spacing gui.navigation_spacing
 
@@ -316,12 +322,12 @@ screen navigation():
 
             textbutton _("Главное меню") action MainMenu()
 
-        textbutton _("Об игре") action ShowMenu("about")
+        ##textbutton _("Об игре") action ShowMenu("about")
 
-        if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
+        ##if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
 
             ## Помощь не необходима и не относится к мобильным устройствам.
-            textbutton _("Помощь") action ShowMenu("help")
+            ##textbutton _("Помощь") action ShowMenu("help")
 
         if renpy.variant("pc"):
 

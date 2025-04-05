@@ -12,25 +12,30 @@
 ##
 ## Символы "_()", окружающие название, отмечают его как пригодное для перевода.
 
-define config.name = _("The warmth of your hands")
+define config.name = _("The Warm of Your Hands")
+
+define config.window_title = "The Warm of Your Hands"
+define config.screen_width = 1920  # Установите желаемую ширину окна
+define config.screen_height = 1080  # Установите желаемую высоту окна
+define config.gl_resize = False
+
 
 
 ## Определяет, показывать ли заголовок, данный выше, на экране главного меню.
 ## Установите на False, чтобы спрятать заголовок.
 
-define gui.show_name = True
+define gui.show_name = False
 
 
 ## Версия игры.
 
-define config.version = "1.0"
+define config.version = "v 1.0"
 
 
 ## Текст, помещённый в экран "Об игре". Поместите текст между тройными скобками.
 ## Для отделения абзацев оставляйте между ними пустую строку.
 
-define gui.about = _p("""
-""")
+define gui.about = _p(""" jjjj """)
 
 
 ## Короткое название игры, используемое для исполняемых файлов и директорий при
@@ -160,7 +165,7 @@ define config.window_icon = "gui/window_icon.png"
 ## проекта.
 
 init python:
-
+    
     ## Следующие функции берут образцы файлов. Образцы файлов не учитывают
     ## регистр и соответствующе зависят от директории проекта (base), с или без
     ## учёта /, задающей директорию. Если обнаруживается множество одноимённых

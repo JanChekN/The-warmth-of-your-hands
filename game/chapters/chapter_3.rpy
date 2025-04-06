@@ -1,5 +1,5 @@
 label chapter_3:
-    jump pr_scene_1
+    jump chapter_1_sn_1
     scene bg park
     'Глава 3'
 

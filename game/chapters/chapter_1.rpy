@@ -1,5 +1,5 @@
-label chapter_1:
-    jump pr_scene_1
+label chapter_1_sn_1:
+    
     scene bg park
     'Глава 1'
 
@@ -9,4 +9,4 @@ label chapter_1:
     Имя: [name]
     Пол гг: [gg_gender]
     Пол партнёра: [partner_gender] (...отладка...)'
-    jump chapter_2
+    jump chapter_1_sn_1
